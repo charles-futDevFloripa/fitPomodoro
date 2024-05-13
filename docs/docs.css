@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=Prata&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*após usar https://coolors.co/  para gerar uma paleta de cores*/
+:root {
+  --blackJack: #101419;
+  --bone: #ece3d5;
+  --cornellRed: #851A1A;
+  --delftBlue: #454372;
+  --shamrockGreen: #25681D;
+}
+
+html,
+body {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bone);
+
+}
+
+.doc-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.doc-container {
+  display: flex;
+  flex-direction: column;
+  font-family: poppins;
+  width: 1000px;
+  overflow: auto;
+}
+
+.doc-functions {
+  margin-bottom: 35px;
+}
+
+
+.doc-functions-title {
+  color: var(--cornellRed);
+  font-family: poppins;
+  font-size: 24px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 5px;
+  border-radius: 3px;
+  box-shadow: 3px 3px 2.6px rgba(0, 0, 0, 0.15);
+  margin: 20px;
+}
+
+.doc-functions-subtitle {
+  color: var(--cornellRed);
+  font-family: poppins;
+  font-weight: 700;
+  font-size: 18px;
+  margin: 10px;
+}
+
+.doc-code {
+  margin: 20px;
+}
+
+.doc-functions-text {
+  padding-left: 25px;
+}
+
+pre {
+
+  background: rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 5px;
+  font-size: 15px;
+
+}
+
+.logo2 {
+  width: 350px;
+  margin-top: 70px;
+  margin-bottom: 10px;
+}

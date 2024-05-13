@@ -1,0 +1,595 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=Prata&display=swap');
+
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+/*após usar https://coolors.co/  para gerar uma paleta de cores*/
+:root {
+   --blackJack: #101419;
+   --bone: #ece3d5;
+   --cornellRed: #851A1A;
+   --delftBlue: #454372;
+   --shamrockGreen: #25681D;
+}
+
+html,
+body {
+   height: 100%;
+   min-height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+}
+
+/*CSS relativo a modal*/
+.showModal {
+   display: flex;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   z-index: 1000;
+   justify-content: center;
+   align-items: center;
+}
+
+.modal {
+   display: none;
+}
+
+.showModal .modal {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   height: 100%;
+   margin: auto;
+   padding: 20px;
+   border-radius: 5px;
+   z-index: 1001;
+}
+
+/*alterações Jaque*/
+
+
+.modal-content {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 70px;
+   max-width: 500px;
+}
+
+h3 {
+   font-family: poppins;
+   font-size: 18px;
+   font-weight: 400;
+   letter-spacing: 1px;
+   color: var(--bone);
+   margin-bottom: 12px;
+}
+
+#username,
+#difficulty {
+   height: 35px;
+   width: 283px;
+   padding: 5px;
+   font-family: poppins;
+   font-size: 15px;
+   color: var(--bone);
+   border-color: var(--bone);
+   border-radius: 5px;
+   border-style: solid;
+   border-width: 1px;
+   outline: none;
+   margin-bottom: 10px;
+   margin-top: 10px;
+}
+
+input::placeholder {
+   color: var(--shadonBone);
+}
+
+label,
+#difficulty {
+   color: var(--shadonBone);
+   font-family: poppins;
+   font-size: 15px;
+}
+
+.inputTime {
+   text-align: right;
+   height: 35px;
+   width: 45px;
+   margin: 5px;
+   color: var(--shadonBone);
+   border-style: solid;
+   outline: none;
+   border-color: var(--bone);
+   border-radius: 5px;
+   border-width: 1px;
+   font-size: 16px;
+   font-family: poppins;
+}
+
+#btn-save {
+   height: 35px;
+   width: 100px;
+   padding: 5px;
+   font-family: poppins;
+   font-weight: 600;
+   font-size: 14px;
+   background-color: var(--bone);
+   border-radius: 5px;
+   border: none;
+   margin-top: 25px;
+}
+
+.logo2 {
+   width: 350px;
+   margin-top: 70px;
+   margin-bottom: 10px;
+}
+
+#exit-icon {
+   position: absolute;
+   text-decoration: none;
+   color: var(--cornellRed);
+   font-size: 33px;
+   margin-right: 50px;
+   text-shadow: 3px 3px 2.6px rgba(0, 0, 0, 0.15);
+   margin-left: 95vw;
+   margin-top: 50px;
+}
+
+
+h1 {
+   color: var(--cornellRed);
+   margin-top: 55px;
+   margin-bottom: 8px;
+   font-size: 25px;
+   font-family: prata;
+}
+
+span,
+li {
+   font-size: 17px;
+   color: rgb(136, 121, 121);
+}
+
+li {
+   margin-left: 20px;
+}
+
+::-webkit-scrollbar {
+   width: 6px;
+   background-color: rgb(171, 168, 168);
+
+}
+
+::-webkit-scrollbar-thumb {
+   background: var(--cornellRed);
+}
+
+/*fim alteraçõe Jaque*/
+form {
+   color: var(--bone);
+}
+
+.timeItem {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+
+
+/*CSS relativo a interface*/
+.container-center {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+
+
+.container {
+   display: flex;
+
+}
+
+.logo {
+   margin-bottom: 15px;
+}
+
+.logo img {
+   width: 350px;
+   margin-right: 20px;
+}
+
+.pomodoro {
+   width: 450px;
+   height: 350px;
+   border-radius: 12px;
+   background: rgba(255, 255, 255, 0.2);
+   box-shadow: 3px 3px 2.6px rgba(0, 0, 0, 0.15);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+
+.pomodoro-timer {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-bottom: 15px;
+}
+
+#pomodoroCountdown {
+   font-family: prata;
+   font-size: 90px;
+   color: var(--bone);
+   text-shadow: 3px 3px 2.6px rgba(0, 0, 0, 0.15);
+}
+
+#pauseCountdown {
+   font-family: prata;
+   font-size: 90px;
+   color: var(--bone);
+   text-shadow: 3px 3px 2.6px rgba(0, 0, 0, 0.15);
+}
+
+.pomodoro-controls {
+   margin-top: 15px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-shadow: 3px 3px 2.6px rgba(0, 0, 0, 0.15);
+}
+
+.pomodoro-buttons {
+   width: 70px;
+   height: 70px;
+   border-radius: 50%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-decoration: none;
+   font-size: 28px;
+   color: var(--bone);
+   border: 3px solid var(--bone);
+   margin: 0px 10px;
+}
+
+
+.menu {
+   padding-top: 40px;
+   width: 30px;
+   height: 380px;
+}
+
+.menu-btn {
+   width: 60px;
+   height: 60px;
+   padding: 5px;
+   margin-bottom: 5px;
+   border-radius: 0 12px 12px 0;
+   background: rgba(255, 255, 255, 0.2);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+}
+
+.menu-btn a {
+   text-decoration: none;
+}
+
+.menu-btn a :hover {
+   text-decoration: none;
+   color: var(--bone);
+   text-shadow: 1.5px 1.5px 2px rgba(0, 0, 0, 0.35);
+}
+
+.btn {
+   width: 40px;
+   height: 40px;
+   border-radius: 50%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+}
+
+
+.icon {
+   font-size: 18px;
+   color: rgba(255, 255, 255, 0.5);
+}
+
+.level {
+   font-family: Poppins, sans-serif;
+   font-weight: 700;
+   font-size: 18px;
+   color: rgba(255, 255, 255, 0.5);
+}
+
+.api {
+   position: fixed;
+   right: 0;
+   bottom: 0;
+   margin: 0;
+   padding: 10px;
+}
+
+.api li {
+   color: #fff;
+   font-size: 12px;
+   font-family: 'Poppins', sans-serif;
+}
+
+/* Class pra usar na troca de cor de fundo (beginner/intermediate/advanced) */
+
+.fundoVerde {
+   background-color: var(--shamrockGreen);
+   /*RGB: 21, 160, 95*/
+}
+
+.fundoAzul {
+   background-color: var(--delftBlue);
+   /*RGB: 69, 67, 114*/
+}
+
+.fundoVermelho {
+   background-color: var(--cornellRed);
+   /*RGB: 184, 20, 20*/
+}
+
+.textoVerde {
+   color: var(--shamrockGreen);
+   /*RGB: 21, 160, 95*/
+}
+
+.textoAzul {
+   color: var(--delftBlue);
+   /*RGB: 69, 67, 114*/
+}
+
+.textoVermelho {
+   color: var(--cornellRed);
+   /*RGB: 184, 20, 20*/
+}
+
+/* para o modal que exibe a pausa e os alongamentos*/
+
+.modal-stretching-logo-text {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: end;
+}
+
+.modal-stretching-logo {
+   margin-bottom: 30px;
+}
+
+.modal-stretching-content {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   gap: 70px;
+   margin-right: 150px;
+}
+
+#stretchingImage img {
+   width: 550px;
+   margin-top: 70px;
+   margin-left: 100px;
+}
+
+#pauseCountDown {
+   width: 150px;
+   height: 70px;
+   border: solid;
+   border-radius: 5px;
+   box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.15);
+   color: var(--bone);
+   font-family: prata;
+   font-size: 28px;
+   margin-bottom: 20px;
+   margin-left: -30px;
+}
+
+#btn-end-pause {
+   width: 150px;
+   height: 50px;
+   border: none;
+   border-radius: 5px;
+   font-family: poppins;
+   font-size: 15px;
+   font-weight: 600;
+   line-height: 18px;
+   letter-spacing: .5px;
+   margin-left: -30px;
+   cursor: pointer;
+}
+
+#stretchingText {
+   width: 500px;
+   font-family: poppins;
+   font-size: 18px;
+   letter-spacing: .5px;
+   color: var(--bone);
+   background-color: rgba(255, 255, 255, 0.1);
+   border-radius: 10px;
+   padding: 10px;
+   color: var(--bone);
+   margin-top: 50px;
+}
+
+
+/* parte para modal de conclusão de todos alongamentos*/
+.modal-content-all-done {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   height: 100%;
+
+}
+
+.modal-stretching-all-done-content {
+   display: flex;
+   align-items: center;
+   flex-direction: row;
+}
+
+.modal-screen-congratulation {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   background: rgba(255, 255, 255, 0);
+   box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.15);
+   width: 600px;
+   border-radius: 20px;
+
+}
+
+.modal-screen-congratulation img {
+
+   filter: drop-shadow(3px 4px 8px rgba(0, 0, 0, 0.5));
+
+}
+
+
+.modal-screen-logo-buttons {
+   display: flex;
+   justify-content: flex-end;
+   align-items: end;
+   flex-direction: column;
+   width: 600px;
+   height: 400px;
+
+}
+
+.modal-logo-all-done {
+   height: auto;
+}
+
+.modal-buttons-all-done {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   height: 200px;
+   width: 430px;
+}
+
+.modal-buttons-all-done button {
+   border-style: solid;
+   outline: none;
+   border-color: var(--bone);
+   border-radius: 5px;
+   border-width: 1px;
+   font-size: 16px;
+   font-family: poppins;
+   color: var(--bone);
+   width: 300px;
+   height: 45px;
+   margin: 15px;
+   box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+.modal-image-congratulation img {
+   width: 400px;
+}
+
+.modal-text-congratulation {
+   font-family: prata;
+   font-size: 40px;
+   color: var(--bone);
+   margin-bottom: 35px;
+}
+
+/* CSS MODAL DE DESCRIÇÃO */
+
+
+#exit-icon {
+   position: absolute;
+   text-decoration: none;
+   color: var(--cornellRed);
+   font-size: 33px;
+   margin-right: 50px;
+   text-shadow: 3px 3px 2.6px rgba(0, 0, 0, 0.15);
+   margin-left: 95vw;
+   margin-top: 50px;
+}
+
+
+.description-container {
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   align-items: center;
+   text-align: start;
+   height: 100vh;
+   width: 100vw;
+   font-family: poppins;
+   overflow: auto;
+
+}
+
+.text {
+   display: flex;
+   flex-direction: row;
+   margin-left: 10px;
+   gap: 90px;
+}
+
+.about {
+   width: 750px;
+
+}
+
+.howToUse {
+   margin-top: 150px;
+   width: 610px;
+   border: solid;
+   color: var(--cornellRed);
+   border-width: 1.5px;
+   border-radius: 20px;
+   padding: 20px;
+}
+
+h1,
+h2 {
+   color: var(--cornellRed);
+   margin-top: 55px;
+   margin-bottom: 8px;
+   font-size: 25px;
+   font-family: prata;
+   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+h2 {
+   margin-top: 20px;
+}
+
+span,
+li {
+   font-size: 17px;
+   color: rgb(136, 121, 121);
+}
+
+li {
+   margin-left: 20px;
+}
