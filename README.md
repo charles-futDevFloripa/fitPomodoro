@@ -1,5 +1,8 @@
 <p align="center">
   <img src="https://github.com/VanderleiaOliveira/Pomodoro-Fit/blob/main/assets/img/logo2.png?raw=true" alt="Logo FitPomodoro">
+
+  ![logo2](https://github.com/charles-futDevFloripa/fitPomodoro/assets/164348201/9fc21b9a-e415-4e6b-915c-41309332bac3)
+
 </p>
 
 # FitPomodoro
