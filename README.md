@@ -16,7 +16,7 @@ As pausas estão divididas em níveis de dificuldade:
 
 Ao concluir um nível de dificuldades, o usuário é parabenizado e convidado a refazer ou trocar o nível de dificuldade.
 
-[FitPomodoro.webm](https://github.com/VanderleiaOliveira/Pomodoro-Fit/assets/153782247/700b8974-607f-40f1-ab3d-faeb304a309c)
+[FitPomodoro.webm](https://github.com/charles-futDevFloripa/fitPomodoro/assets/164348201/2917d755-b89f-4afc-a5fc-8cb565fd34d5)
 
 
 ## Tecnologias Utilizadas
